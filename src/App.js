@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 const steps = [
 	{
 		id: '0',
-		message: 'Hey Geek!',
+		message: 'Hey You!',
 
 		// This calls the next id
 		// i.e. id 1 in this case
@@ -56,7 +56,7 @@ const theme = {
 
 // Set some properties of the bot
 const config = {
-	botAvatar: "img.png",
+	//botAvatar: "src/images.png",
 	floating: true,
 };
 
@@ -68,7 +68,7 @@ function App() {
 
 					// This appears as the header
 					// text for the chat bot
-					headerTitle="GeekBot"
+					headerTitle="Trung Anh Bot"
 					steps={steps}
 					{...config}
 
