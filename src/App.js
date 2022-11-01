@@ -1,46 +1,46 @@
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
-
 const steps = [
-	{
-		id: '0',
-		message: 'Hey You!',
+  {
+    id: '1',
+    message: 'Hey you! Do you need any support? Please write your name',
+    trigger: '2',
+  },
+  {
+    id: '2',
+    user: true,
+    trigger: '3',
+  },
+  {
+    id: '3',
+    message: 'Hi {previousValue}, how can I help you?',
+    trigger: '4',
+  },
 
-		// This calls the next id
-		// i.e. id 1 in this case
-		trigger: '1',
-	}, {
-		id: '1',
 
-		// This message appears in
-		// the bot chat bubble
-		message: 'Please write your username',
-		trigger: '2'
-	}, {
-		id: '2',
 
-		// Here we want the user
-		// to enter input
-		user: true,
-		trigger: '3',
-	}, {
-		id: '3',
-		message: " hi {previousValue}, how can I help you?",
-		trigger: 4
-	}, {
-		id: '4',
-		options: [
-			
-			// When we need to show a number of
-			// options to choose we create alist
-			// like this
-			{ value: 1, label: 'View Courses' },
-			{ value: 2, label: 'Read Articles' },
+  {
+    id: '4',
+    user: true,
+    trigger: '5',
+  },
+  {
+    id: '5',
+    message: 'Thanks you for sharing your problem. Please call me below to support better! Please, press any key',
+    trigger: '6',
+  },
+  {
+    id: '6',
+    user: true,
+    trigger: '7',
+  },
+  {
+    id: '7',
+    message: 'Contact Trung Anh: 0967276988 or following by link: fb.com/fidou',
+    end: true,
+  }
+]
 
-		],
-		end: true
-	}
-];
 
 // Creating our own theme
 const theme = {
@@ -68,7 +68,7 @@ function App() {
 
 					// This appears as the header
 					// text for the chat bot
-					headerTitle="Trung Anh Bot"
+					headerTitle="Fidou Bot"
 					steps={steps}
 					{...config}
 
